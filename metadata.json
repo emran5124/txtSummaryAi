@@ -1,0 +1,6 @@
+{
+  "name": "خلاصه‌ساز کتاب",
+  "description": "برنامه تلخیص هوشمند کتاب به کمک مدل های هوش مصنوعی جمینای با پشتیبانی از از سرگیری خودکار و مدیریت کلیدها",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
