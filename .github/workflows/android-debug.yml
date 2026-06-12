@@ -44,6 +44,9 @@ jobs:
           cache-read-only: false
           validate-wrappers: false
 
+      - name: Regenerate Gradle Wrapper as safety fallback
+        run: gradle wrapper --gradle-version 9.3.1
+
       - name: Grant execute permission to gradlew
         run: chmod +x gradlew
 
