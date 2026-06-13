@@ -38,10 +38,12 @@ jobs:
 
       - name: Setup environment files
         run: |
-          # Create a dummy .env file to satisfy the Secrets Gradle Plugin
-          # as configured in the project's build.gradle
-          touch .env
-          echo "GEMINI_API_KEY=" > .env
+          # Copy .env.example to .env to satisfy the Secrets Gradle Plugin with valid default placeholder values
+          if [ -f .env.example ]; then
+            cp .env.example .env
+          else
+            echo "GEMINI_API_KEY=dummy_key" > .env
+          fi
 
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
